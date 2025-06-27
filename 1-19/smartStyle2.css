@@ -1,0 +1,49 @@
+@media screen and (max-width: 479px) {
+
+
+    .orange{
+        height: 200px;
+        width: 200px;
+    }
+
+    .white{
+    height: 160px;
+    width: 60px;
+    margin-right: 70px;
+}
+
+    .contents{
+        height: 300px;
+        width: 200px;
+    }
+
+    .blue{
+        height: 100px;
+        width: 200px;
+    }
+
+
+    .green{
+        height: 200px;
+        width: 200px;
+    }
+
+    .pink1{
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+     .pink2{
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+     .pink3{
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    .purple{
+        height: 100px;
+        width: 200px;
+    }
+
+}
