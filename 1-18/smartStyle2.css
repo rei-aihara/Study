@@ -11,6 +11,15 @@
         width: 100px;
     }
 
+    .main{
+        height: 250px;
+        width: 200px;
+    }
+
+    .green{
+        width: 125px;
+    }
+
     .pink{
         width: 125px;
     }
@@ -18,6 +27,15 @@
     .red{
         width: 75px;
     }
+
+    .yellow{
+        width: 200px;
+    }
+
+    .purple{
+        width: 300px;
+    }
+
 
 }
 
