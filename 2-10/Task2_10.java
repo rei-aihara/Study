@@ -3,7 +3,7 @@ public class Task2_10 {
     public static void main(String[] args) {
 
         // ① 「みかん」、「りんご」、「ぶどう」、「メロン」の値を設定した配列 fruits を作成してください。
-        String[] fruits = {"みかん","りんご","ブドウ","メロン"};
+        String[] fruits = {"みかん","りんご","ぶどう","メロン"};
 
         // ② for文を使って①で作成した配列を出力しなさい。
         for (int i = 0; i < fruits.length; i++) {
