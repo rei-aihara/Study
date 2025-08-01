@@ -7,12 +7,14 @@ SELECT * from staff WHERE section ='経理部';
 SELECT * from Stocks WHERE Quantity >= 10 AND Quantity <= 25;
 
 -- 3. INTERSECT演算子を使用して、Order_Headerテーブルで合計値(Total)が5000以上10000未満のものを抽出して下さい。
-SELECT A.Total FROM Order_Header A WHERE A.Total > 5000
+SELECT A.Total FROM Order_Header A WHERE A.Total >= 5000
 INTERSECT
 SELECT B.Total FROM Order_Header B WHERE B.Total < 10000;
 
 -- 4. 「関東」エリアの全店舗情報を抽出して下さい。
-SELECT * from shop WHERE shopname IN('新宿', '横浜');
+SELECT TBL1.* FROM Shop TBL1
+JOIN Area TBL2 ON TBL1.AreaCode = TBL2.AreaCode
+WHERE TBL2.AreaName = '関東';
 
 -- 5. 在庫(Stocksテーブル)内の各商品の合計数量を抽出して下さい。
 SELECT GoodsCode, SUM(quantity) FROM Stocks 
