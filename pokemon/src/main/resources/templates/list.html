@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ポケモンずかん</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>ポケモンずかん</h1>
+  <a href="/add" class="btn">ポケモン登録</a>
+</header>
+
+<!-- ピックアップ -->
+<section class="pickup-section">
+  <h2 class="pickup-title">ピックアップ</h2>
+  <div class="pickup-card" th:each="p, stat : ${list}" th:classappend="${stat.index == 0} ? 'active'">
+    <img th:src="${p.imageUrl}" alt="pokemon">
+    <div class="pickup-info">
+      <h2 th:text="${p.name}"></h2>
+      <p th:text="${p.category}"></p>
+      <div class="type-badge" th:text="${p.type}" th:classappend="${p.type}"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 一覧 -->
+<section class="container">
+  <div class="card" th:each="p : ${list}">
+    <img th:src="${p.imageUrl}" alt="pokemon">
+    <h3 th:text="${p.name}"></h3>
+    <p th:text="${p.category}"></p>
+    <div class="type-badge" th:text="${p.type}" th:classappend="${p.type}"></div>
+  </div>
+</section>
+
+<script>
+$(function() {
+  let index = 0;
+  setInterval(function() {
+    const cards = $(".pickup-card");
+    cards.removeClass("active");
+    index++;
+    if (index >= cards.length) index = 0;
+    cards.eq(index).addClass("active");
+  }, 3000);
+});
+</script>
+
+</body>
+</html>
